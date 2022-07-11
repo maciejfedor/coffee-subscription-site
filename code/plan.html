@@ -1,0 +1,420 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+
+<body>
+  <header class="header header--about">
+    <nav class="nav">
+      <img
+        src="assets/shared/desktop/logo.svg"
+        alt="cofferoasters logo"
+        class="nav__logo"
+        id="logo"
+      />
+
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="about.html">About us</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="plan.html">Create your plan</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__wrap header__wrap--plan">
+      <div class="header__text">
+        <h1>Create plan</h1>
+        <p class="header__description">
+          Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality.
+        </p>
+      </div>
+      <div></div>
+    </div>
+  </header>
+
+  <section class="section-steps section-steps--dark">
+    
+
+    <div class="steps steps--dark">
+      <div class="steps__step">
+        <p class="steps__number">01</p>
+        <h2 class="steps__header steps__header--white">Pick your coffee</h2>
+        <p class="steps__description steps__description--white">
+          Select from our evolving range of artisan coffees. Our beans are
+          ethically sourced and we pay fair prices for them. There are new
+          coffees in all profiles every month for you to try out.
+        </p>
+      </div>
+      <div class="steps__step">
+        <p class="steps__number">02</p>
+        <h2 class="steps__header steps__header--white">Choose the frequency</h2>
+        <p class="steps__description steps__description--white">
+          Customize your order frequency, quantity, even your roast style and
+          grind type. Pause, skip or cancel your subscription with no
+          commitment through our online portal.
+        </p>
+      </div>
+      <div class="steps__step">
+        <p class="steps__number">03</p>
+        <h2 class="steps__header steps__header--white">Receive and enjoy!</h2>
+        <p class="steps__description steps__description--white">
+          We ship your package within 48 hours, freshly roasted. Sit back and
+          enjoy award-winning world-class coffees curated to provide a
+          distinct tasting experience.
+        </p>
+      </div>
+    </div>
+   
+  </section>
+  <section class = section-choice>
+<div class = choices>
+  <ul class = nav__choices>
+    <li class = nav__choices--item data-item="1" >
+      <span class = "nav__choices--number ">01</span>
+      <p class = "nav__choices--choice nav__choices--choice-active ">Preferences</p>
+    </li>
+    <li class = nav__choices--item data-item="2">
+      <span class = "nav__choices--number">02</span>
+      <p class = "nav__choices--choice">Bean Type</p>
+    </li>
+    <li class = nav__choices--item data-item="3">
+      <span class = "nav__choices--number">03</span>
+      <p class = "nav__choices--choice">Quantity</p>
+    </li>
+    <li class = nav__choices--item data-item="4">
+      <span class = "nav__choices--number">04</span>
+      <p class = "nav__choices--choice">Grind Option</p>
+    </li>
+    <li class = nav__choices--item data-item="5">
+      <span class = "nav__choices--number">05</span>
+      <p class = "nav__choices--choice">Deliveries</p>
+    </li>
+  </ul>
+
+
+  <div class= "accordion">
+
+    <div class = "accordion__item " >
+      <h3 class = "accordion__header accordion__header--open">How do you drink your coffee?</h3>
+    
+        <div class = "accordion__hidden accordion__hidden-open">
+          
+          <div class = "accordion__card accordion__card--1 accordion__card--active">
+            
+            <h4 class = "accordion__card-header">Capsule</h4>
+            <p class = "accordion__card-description">
+              Compatible with Nespresso systems and similar brewers
+            </p>
+          </div>
+      
+        <div class = "accordion__card accordion__card--2">
+
+          <h4 class = "accordion__card-header">Filter</h4>
+          <p class = "accordion__card-description">
+            For pour over or drip methods like Aeropress, Chemex, and V60
+          </p>
+        </div> 
+  
+        <div class = "accordion__card accordion__card--3">
+          <h4 class = "accordion__card-header">Espresso</h4>
+          <p class = "accordion__card-description">
+            Dense and finely ground beans for an intense, flavorful experience
+          </p>
+        </div> 
+      </div>
+    </div>
+    <div class = "accordion__item " >
+      <h3 class = "accordion__header accordion__header--open">What type of coffee?</h3>
+    
+        <div class = "accordion__hidden accordion__hidden-open">
+          
+          <div class = "accordion__card accordion__card--1">
+            
+            <h4 class = "accordion__card-header">Single origin</h4>
+            <p class = "accordion__card-description">
+              Distinct, high quality coffee from a specific family-owned farm
+            </p>
+          </div>
+        
+        <div class = "accordion__card accordion__card--2">
+
+          <h4 class = "accordion__card-header">Decaf</h4>
+          <p class = "accordion__card-description">
+            Just like regular coffee, except the caffeine has been removed
+          </p>
+        </div> 
+  
+        <div class = "accordion__card accordion__card--3">
+          <h4 class = "accordion__card-header">Blended</h4>
+          <p class = "accordion__card-description">
+            Combination of two or three dark roasted beans of organic coffees
+          </p>
+        </div> 
+      </div>
+    </div>
+    <div class = "accordion__item " >
+      <h3 class = "accordion__header accordion__header--open">How much would you like?</h3>
+  
+        <div class = "accordion__hidden accordion__hidden-open">
+          
+          <div class = "accordion__card accordion__card--1">
+            
+            <h4 class = "accordion__card-header">250g</h4>
+            <p class = "accordion__card-description">
+              Perfect for the solo drinker. Yields about 12 delicious cups.
+            </p>
+          </div>
+        
+        <div class = "accordion__card accordion__card--2">
+          <h4 class = "accordion__card-header">500g</h4>
+          <p class = "accordion__card-description">
+            Perfect option for a couple. Yields about 40 delectable cups.
+          </p>
+        </div> 
+  
+        <div class = "accordion__card accordion__card--3">
+          <h4 class = "accordion__card-header">1000g</h4>
+          <p class = "accordion__card-description">
+            Perfect for offices and events. Yields about 90 delightful cups.
+          </p>
+        </div> 
+      </div>
+    </div>
+    <div class = "accordion__item " >
+      <h3 class = "accordion__header accordion__header--open">Want us to grind them?</h3>
+  
+        <div class = "accordion__hidden accordion__hidden-open">
+          
+          <div class = "accordion__card accordion__card--1">
+            <h4 class = "accordion__card-header">Wholebean</h4>
+            <p class = "accordion__card-description">
+              Best choice if you cherish the full sensory experience
+            </p>
+          </div>
+        
+        <div class = "accordion__card accordion__card--2">
+          <h4 class = "accordion__card-header">Filter</h4>
+          <p class = "accordion__card-description">
+            For drip or pour-over coffee methods such as V60 or Aeropress
+          </p>
+        </div> 
+  
+        <div class = "accordion__card accordion__card--3">
+          <h4 class = "accordion__card-header">Cafetiére</h4>
+          <p class = "accordion__card-description">
+            Course ground beans specially suited for french press coffee
+          </p>
+        </div> 
+      </div>
+    </div>
+    <div class = "accordion__item " >
+      <h3 class = "accordion__header accordion__header--open">How often should we deliver?</h3>
+  
+        <div class = "accordion__hidden accordion__hidden-open">
+          
+          <div class = "accordion__card accordion__card--1">
+            <h4 class = "accordion__card-header">Every week</h4>
+            <p class = "accordion__card-description">
+              $14.00 per shipment. Includes free first-class shipping.
+            </p>
+          </div>
+      
+        <div class = "accordion__card accordion__card--2">
+          <h4 class = "accordion__card-header">Every 2 weeks</h4>
+          <p class = "accordion__card-description">
+            $17.25 per shipment. Includes free priority shipping.
+          </p>
+        </div> 
+  
+        <div class = "accordion__card accordion__card--3">
+          <h4 class = "accordion__card-header">Every month</h4>
+          <p class = "accordion__card-description">
+            $22.50 per shipment. Includes free priority shipping.
+          </p>
+        </div> 
+      </div>
+    </div>
+
+    
+
+
+
+  </div>
+
+  <div class = "choices__summary">
+    <span class = "choices__summary-subheading">Order summary</span>
+    <blockquote class = "choices__summary-text">
+      “I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span> ground ala <span>Cafetiare</span>, 
+  sent to me <span>Every week</span>.”
+    </blockquote>
+</div>
+
+<a href="plan.html" class="btn__link btn__link--grid"
+><button class="btn">Create your plan</button></a
+>
+
+  </div>
+
+
+  </section>
+
+  <footer class="footer">
+    <nav class="nav--footer">
+      <img
+        src="assets/shared/desktop/logo.svg"
+        alt="cofferoasters logo"
+        class="nav__logo"
+        id="logo"
+      />
+      <ul class="nav__links">
+        <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="about.html">About us</a></li>
+        <li class="nav__item">
+          <a class="nav__link" href="plan.html">Create your plan</a>
+        </li>
+      </ul>
+      <ul class="nav__social">
+        <li class="nav__item--social">
+          <a href="#">
+            <img
+              src="assets/shared/desktop/icon-facebook.svg"
+              class="nav__icon"
+              alt="facebook logo"
+            />
+          </a>
+        </li>
+        <li class="nav__item--social">
+          <a href="#">
+            <img
+              src="assets/shared/desktop/icon-twitter.svg"
+              class="nav__icon"
+              alt="twitter logo"
+            />
+          </a>
+        </li>
+        <li class="nav__item--social">
+          <a href="#">
+            <img
+              src="assets/shared/desktop/icon-instagram.svg"
+              class="nav__icon"
+              alt="instagram logo"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+  <div class="modal hidden">
+    <h3 class="modal__header">
+      Order summary
+    </h3>
+    <div class = modal__text>
+      <blockquote class="modal__quote">
+        “I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span> ground ala <span>Cafetiare</span>, 
+        sent to me <span>Every week</span>.”
+      </blockquote>
+      <p class = "modal__notice">
+        Is this correct? You can proceed to checkout or go back to plan selection if something 
+        is off. Subscription discount codes can also be redeemed at the checkout.
+      </p>
+    </div>
+<div class = "modal__summary">
+  <span class = "modal__price">$14.00 / mo</span>
+  <button class="btn btn--modal">Checkout</button>
+
+</div>
+
+  </div>
+  <div class="overlay hidden"></div>
+
+  
+  <!-- Home
+  About us
+  Create your plan
+
+
+
+  What type of coffee?
+
+  Single origin
+  Distinct, high quality coffee from a specific family-owned farm
+
+  Decaf
+  Just like regular coffee, except the caffeine has been removed
+
+  Blended
+  Combination of two or three dark roasted beans of organic coffees
+
+  How much would you like?
+  250g
+  Perfect for the solo drinker. Yields about 12 delicious cups.
+  
+  500g
+  Perfect option for a couple. Yields about 40 delectable cups.
+
+  1000g
+  Perfect for offices and events. Yields about 90 delightful cups.
+
+  Want us to grind them?
+
+  Wholebean
+  Best choice if you cherish the full sensory experience
+
+  Filter
+  For drip or pour-over coffee methods such as V60 or Aeropress
+
+  Cafetiére
+  Course ground beans specially suited for french press coffee
+
+  How often should we deliver?
+
+  Every week
+  $14.00 per shipment. Includes free first-class shipping.
+
+  Every 2 weeks
+  $17.25 per shipment. Includes free priority shipping.
+
+  Every month
+  $22.50 per shipment. Includes free priority shipping.
+
+  Order Summary
+  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
+  sent to me _____.”
+
+  Create my plan! -->
+
+  <!-- Modal -->
+  <!-- Order Summary
+
+  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+  sent to me _____.”
+
+  Is this correct? You can proceed to checkout or go back to plan selection if something 
+  is off. Subscription discount codes can also be redeemed at the checkout.
+
+  $_____/month
+
+  Checkout -->
+  <!-- End modal -->
+
+
+</body>
+
+</html>
