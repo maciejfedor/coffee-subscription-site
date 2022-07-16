@@ -26,8 +26,12 @@ body {
   font-size: 1.6rem;
   /* max-width: 120.8rem; */
   margin: 0 auto;
-  padding: 0 8.1rem;
+  /* padding: 0 8.1rem; */
   color: var(--dark-grey-blue);
+}
+
+main {
+  padding: 0 8.1rem;
 }
 
 h1,
@@ -70,6 +74,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 8.1rem;
+  z-index: 10000;
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .nav__links {
