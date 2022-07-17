@@ -12,7 +12,7 @@ Site build based on Figma design input from site [Coffeeroasters subscription si
 
 ### Links
 
-- Live Site URL: [https://maciej-coffee-subscription-site.netlify.app/](https://your-live-site-url.com)
+- Live Site URL: [https://maciej-coffee-subscription-site.netlify.app/](https://maciej-coffee-subscription-site.netlify.app/)
 
 Users should be able to:
 
