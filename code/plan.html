@@ -119,7 +119,7 @@
     
         <div class = "accordion__hidden" data-item="1" >
           
-          <div class = "accordion__card accordion__card--1 accordion__card--active">
+          <div class = "accordion__card accordion__card--1" data-card= "1"  >
             
             <h4 class = "accordion__card-header">Capsule</h4>
             <p class = "accordion__card-description">
@@ -127,7 +127,7 @@
             </p>
           </div>
       
-        <div class = "accordion__card accordion__card--2">
+        <div class = "accordion__card accordion__card--2" data-card= "1" >
 
           <h4 class = "accordion__card-header">Filter</h4>
           <p class = "accordion__card-description">
@@ -135,7 +135,7 @@
           </p>
         </div> 
   
-        <div class = "accordion__card accordion__card--3">
+        <div class = "accordion__card accordion__card--3" data-card= "1" >
           <h4 class = "accordion__card-header">Espresso</h4>
           <p class = "accordion__card-description">
             Dense and finely ground beans for an intense, flavorful experience
@@ -264,14 +264,12 @@
   <div class = "choices__summary">
     <span class = "choices__summary-subheading">Order summary</span>
     <blockquote class = "choices__summary-text">
-      “I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span> ground ala <span>Cafetiare</span>, 
-  sent to me <span>Every week</span>.”
+      “I drink my coffee as <span data-choice = "1">_____</span>, with a <span data-choice = "2">_____</span> type of bean. <span data-choice = "3">_____</span> ground ala <span data-choice = "4">_____</span>, 
+  sent to me <span data-choice = "5">_____</span>.”
     </blockquote>
 </div>
 
-<a href="plan.html" class="btn__link btn__link--grid"
-><button class="btn">Create your plan</button></a
->
+<button class="btn btn__link--grid btn--open-modal">Create your plan</button>
 
   </div>
 
@@ -331,8 +329,8 @@
     </h3>
     <div class = modal__text>
       <blockquote class="modal__quote">
-        “I drink my coffee as <span>Filter</span>, with a <span>Decaf</span> type of bean. <span>250g</span> ground ala <span>Cafetiare</span>, 
-        sent to me <span>Every week</span>.”
+        “I drink my coffee as <span>_____</span>, with a <span>_____</span> type of bean. <span>_____</span> ground ala <span>_____</span>, 
+        sent to me <span>_____</span>.”
       </blockquote>
       <p class = "modal__notice">
         Is this correct? You can proceed to checkout or go back to plan selection if something 
@@ -341,7 +339,7 @@
     </div>
 <div class = "modal__summary">
   <span class = "modal__price">$14.00 / mo</span>
-  <button class="btn btn--modal">Checkout</button>
+  <button class="btn btn--close-modal">Checkout</button>
 
 </div>
 

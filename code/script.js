@@ -70,8 +70,8 @@ const itemEl = document.querySelectorAll('.accordion__header');
 const itemContent = document.querySelectorAll('.accordion__hidden');
 
 const openItem = function (i) {
-  itemEl[i].classList.toggle('accordion__hidden-open');
-  itemEl[i].classList.toggle('accordion__header--open');
+  itemEl[i].classList.add('accordion__hidden-open');
+  itemEl[i].classList.add('accordion__header--open');
 
   if (itemEl[i].classList.contains('accordion__hidden-open'))
     itemContent[i].style.maxHeight = itemContent[i].scrollHeight + 'px';
@@ -100,7 +100,7 @@ const accordionOpen = function () {
         });
         closecurrentItem(i);
       } else {
-        closelatestItem();
+        // closelatestItem();
         openItem(i);
         choiceItemText.forEach(item => {
           item.classList.remove('nav__choices--choice-active');
@@ -133,4 +133,76 @@ choiceItem.forEach((item, i) => {
   });
 });
 
-//scroll into view
+//Card choice
+const cards = document.querySelectorAll('.accordion__card');
+const cardDesc = document.querySelectorAll('.accordion__card-header');
+
+itemContent.forEach((card, i) => {
+  card.addEventListener('click', function (e) {
+    const clicked = e.target.closest('.accordion__card');
+
+    if (clicked.classList.contains('accordion__card')) {
+      itemContent[i]
+        .querySelectorAll(':scope > .accordion__card')
+        .forEach(c => c.classList.remove('accordion__card--active'));
+
+      clicked.classList.add('accordion__card--active');
+      let header = clicked.querySelector('.accordion__card-header').textContent;
+      summaryUpdate(i, header);
+    }
+    if (i < 4) {
+      openItem(i + 1);
+      itemEl[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+      choiceItemText.forEach(item => {
+        item.classList.remove('nav__choices--choice-active');
+      });
+      choiceItemText[i + 1].classList.add('nav__choices--choice-active');
+    }
+  });
+});
+
+const summary = document.querySelector('.choices__summary-text');
+const modalSummary = document.querySelector('.modal__quote');
+
+const summaryUpdate = function (i, fill) {
+  let blank = summary.querySelectorAll(':scope > span');
+  let blankModal = modalSummary.querySelectorAll(':scope > span');
+
+  blank[i].textContent = fill;
+  blankModal[i].textContent = fill;
+};
+
+// summaryUpdate(1);
+
+//Modal
+
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.btn--close-modal');
+const btnOpenModal = document.querySelector('.btn--open-modal');
+
+const openModal = function (e) {
+  e.preventDefault();
+  if (!summary.textContent.includes('_____')) {
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    nav.style.opacity = 0;
+  }
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+  nav.style.opacity = 1;
+};
+
+btnOpenModal.addEventListener('click', openModal);
+
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
