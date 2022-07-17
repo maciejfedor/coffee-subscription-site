@@ -98,6 +98,7 @@ p {
   display: flex;
   list-style: none;
   gap: 3.3rem;
+  transition: all 0.3s;
 }
 
 .nav__link:link,
@@ -113,6 +114,7 @@ p {
 .nav__link:hover,
 .nav__link:active {
   color: var(--dark-grey-blue);
+  transition: all 0.3s;
 }
 
 .header__wrap {
@@ -483,6 +485,11 @@ h1 {
   opacity: 0.6;
 }
 
+.nav__choices--number-active {
+  color: var(--dark-grey-blue);
+  opacity: 1;
+}
+
 .nav__choices {
   list-style: none;
 }
@@ -509,18 +516,24 @@ h1 {
   background-position: center center;
 }
 
-/* .accordion__header--open::after {
+.accordion__header--open::after {
   transform: rotate(180deg);
-} */
+}
 
 .accordion__item {
-  margin-bottom: 8.8rem;
+  margin-bottom: 4.8rem;
 }
 
 .accordion__hidden {
   display: flex;
   gap: 2.3rem;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+
+.accordion__hidden .accordion__hidden-open {
+  display: block;
 }
 
 .accordion__card {
@@ -545,6 +558,10 @@ h1 {
 .accordion__card-header {
   font-size: 2.4rem;
   margin-bottom: 2.4rem;
+}
+
+.accordion__card-description {
+  padding-bottom: 8.4rem;
 }
 
 .section-choice {
