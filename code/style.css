@@ -302,6 +302,8 @@ h1 {
 
 .section-steps--dark {
   background-color: var(--dark-blue);
+  margin-left: 8.1rem;
+  margin-right: 8.1rem;
 }
 
 .steps {
