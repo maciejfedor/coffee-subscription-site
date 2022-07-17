@@ -1,6 +1,6 @@
 # Coffeeroasters subscription site solution
 
-Site build based on Figma design input from site [Coffeeroasters subscription site coding challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6)
+Site build based on Figma design input from site [Coffeeroasters subscription site coding challenge](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6)
 
 ## Table of contents
 
