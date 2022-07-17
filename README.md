@@ -19,6 +19,12 @@ Users should be able to:
 - See hover states for all interactive elements throughout the site
 - Make selections to create a coffee subscription and see an order summary modal of their choices
 
+Additonaly site includes listed below features:
+
+- sticky navigation bar
+- lazy sections fade in
+- Scroll into view
+
 ### Expected bahaviour
 
 The interactive subscription page has a number of specific behaviours, which are listed below:
