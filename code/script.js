@@ -26,26 +26,26 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(header);
 
 // Reveal sections
-// const allSections = document.querySelectorAll('.section');
+const allSections = document.querySelectorAll('.section');
 
-// const revealSection = function (entries, observer) {
-//   const [entry] = entries;
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
 
-//   if (!entry.isIntersecting) return;
+  if (!entry.isIntersecting) return;
 
-//   entry.target.classList.remove('section--hidden');
-//   observer.unobserve(entry.target);
-// };
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
 
-// const sectionObserver = new IntersectionObserver(revealSection, {
-//   root: null,
-//   threshold: 0.15,
-// });
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
 
-// allSections.forEach(function (section) {
-//   sectionObserver.observe(section);
-//   section.classList.add('section--hidden');
-// });
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
 
 // Menu fade animation
 
@@ -148,7 +148,9 @@ itemContent.forEach((card, i) => {
 
       clicked.classList.add('accordion__card--active');
       let header = clicked.querySelector('.accordion__card-header').textContent;
+
       summaryUpdate(i, header);
+      PaymentUpdate();
     }
     if (i < 4) {
       openItem(i + 1);
@@ -171,8 +173,6 @@ const summaryUpdate = function (i, fill) {
   blank[i].textContent = fill;
   blankModal[i].textContent = fill;
 };
-
-// summaryUpdate(1);
 
 //Modal
 
@@ -206,3 +206,36 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+// price update
+const price = document.querySelector('.modal__price');
+let weight = summary.querySelector(':scope > .weight');
+let freq = summary.querySelector(':scope > .freq');
+
+const PaymentUpdate = function () {
+  if (weight.textContent == '250g') {
+    if (freq.textContent == 'Every week') {
+      price.textContent = `$${7.2 * 4} / mo`;
+    } else if (freq.textContent == 'Every 2 weeks') {
+      price.textContent = `$${9.6 * 2} / mo`;
+    } else if (freq.textContent == 'Every month') {
+      price.textContent = '$12.00  / mo';
+    }
+  } else if (weight.textContent == '500g') {
+    if (freq.textContent == 'Every week') {
+      price.textContent = `$${13 * 4} / mo`;
+    } else if (freq.textContent == 'Every 2 weeks') {
+      price.textContent = `$${17.5 * 2} / mo`;
+    } else if (freq.textContent == 'Every month') {
+      price.textContent = '$22.00  / mo';
+    }
+  } else if (weight.textContent == '1000g') {
+    if (freq.textContent == 'Every week') {
+      price.textContent = `$${22 * 4} / mo`;
+    } else if (freq.textContent == 'Every 2 weeks') {
+      price.textContent = `$${32 * 2} / mo`;
+    } else if (freq.textContent == 'Every month') {
+      price.textContent = '$42.00  / mo';
+    }
+  }
+};
