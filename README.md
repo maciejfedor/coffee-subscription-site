@@ -4,15 +4,7 @@ Site build based on Figma design input from [Coffeeroasters subscription site co
 
 - Live Site URL: [https://maciej-coffee-subscription-site.netlify.app/](https://maciej-coffee-subscription-site.netlify.app/)
 
-## Table of contents
-
-- [Overview](#overview)
-  - [Expected bahaviour](#the-challenge)
-  - [Links](#links)
-
 ## Overview
-
-### Links
 
 - Live Site URL: [https://maciej-coffee-subscription-site.netlify.app/](https://maciej-coffee-subscription-site.netlify.app/)
 
@@ -25,18 +17,13 @@ Additonaly site includes listed below features:
 
 - sticky navigation bar
 - lazy sections fade in
-- Scroll into view
+- Scroll into view feature
 
-### Expected bahaviour
+### Behaviour
 
 The interactive subscription page has a number of specific behaviours, which are listed below:
 
-- If "Capsule" is selected for the first option
-  - The "Want us to grind them?" section should be disabled and not able to be opened
 - Order summary texts updates
-  - If "Capsule" is selected, update the order summary text to:
-    - "I drink my coffee **using** Capsules"
-    - Remove the grind selection text
   - If "Filter" or "Espresso" are selected, update the order summary text to:
     - "I drink my coffee **as** Filter||Espresso"
     - Keep/Add the grind selection text
